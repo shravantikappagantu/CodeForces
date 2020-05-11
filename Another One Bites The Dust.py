@@ -1,0 +1,10 @@
+l=list(map(int,input().split()))
+count=0
+count+=(l[2]*2)
+if(l[0]<l[1]):
+    count+=((l[0]*2)+1)
+elif(l[0]>l[1]):
+    count+=((l[1]*2)+1)
+else:
+    count+=(l[0]+l[1])
+print(count)
