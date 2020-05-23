@@ -1,0 +1,23 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+e=int(input())
+f=int(input())
+s=0
+if e>f:
+    l=min(a,d)
+    a=a-l
+    d=d-l
+    s=e*l
+    l=min(b,c,d)
+    s=s+l*f
+else:
+    l=min(b,c,d)
+    s=f*l
+    b=b-l
+    c=c-l
+    d=d-l
+    l=min(a,d)
+    s=s+e*l
+print(s)
