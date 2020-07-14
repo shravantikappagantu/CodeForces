@@ -1,44 +1,17 @@
-# TIME LIMIT IS EXCEEDING ON TEST 3
+# Aceepted!
 
 t=int(input())
 for i in range(t):
     n=int(input())
-    l=list(map(int, input().split()))
+    a=list(map(int, input().split()))
     flag=0
-    index=0
-    while flag==0 and index<n:
-        ans=[]
-        m=l[index]
-        #print(index)
-        for i in range(index,n):
-            #m=l[0]
-            #print(i)
-            #print(m)
-            if l[i]>m:
-                ans.append(index+1)
-                m=l[i]
-                #print(m)
-                #print(i)
-                break
-        for j in range(i,n):
-            #print(j)
-            #print(i)
-            #print(m)
-            if l[j]<m:
-                ans.append(j+1)
-                ans.append(i+1)
-                break
-        #ans.sort()
-        if len(set(ans))==3:
+    for i in range(1,n-1):
+        if (a[i] > a[i - 1] and a[i] > a[i + 1]):
             flag=1
-        else:
-            index=index+1
-            flag=0
-        #print(flag)
-    ans.sort()
+            #print(i)
+            break
     if flag==1:
         print("YES")
-        print(*ans)
+        print(i,i+1,i+2)
     else:
         print("NO")
-            
